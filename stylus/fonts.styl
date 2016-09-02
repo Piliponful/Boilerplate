@@ -1,0 +1,21 @@
+webfont(family, folder, file, hack-chrome-windows = false, weight = normal, style = normal)
+  @font-face
+    font-family family
+    src url('../fonts/' + folder + '/' + file + '.eot')
+    src url('../fonts/' + folder + '/' + file + '.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/' + folder + '/' + file + '.woff2') format('woff2'),
+        url('../fonts/' + folder + '/' + file + '.woff') format('woff'),
+        url('../fonts/' + folder + '/' + file + '.ttf') format('truetype'),
+        url('../fonts/' + folder + '/' + file + '.svg#'+ family) format('svg')
+    font-weight weight
+    font-style style
+  if hack-chrome-windows
+    @media screen and (-webkit-min-device-pixel-ratio:0)
+      @font-face
+        font-family family
+        src url('../fonts/' + folder + '/' + file + '.svg#'+ family) format('svg')
+
+
+webfont('Roboto Regular', 'Roboto', 'Roboto-Regular', true, 'normal', 'normal')
+webfont('Roboto Light', 'Roboto', 'Roboto-Light', true, '300', 'normal')
+webfont('Raleway Regular', 'Raleway', 'Raleway-Regular', true, 'normal', 'normal')

@@ -1,0 +1,22 @@
+@import 'jeet'
+@import 'typographic'
+
+@import 'fonts'
+@import 'var'
+
+typographic()
+
+body
+  +below(700px)
+    color blue
+
+.container
+  center(900px)
+
+// .col:nth-child(1)
+//   col(1/4, offset: -1/4)
+// .col:nth-child(2)
+//   col(1/4)
+
+.col
+  col(1/2, cycle: 2)
